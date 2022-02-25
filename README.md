@@ -18,6 +18,7 @@ Monster instantly kill the player by colliding
 ***Portal Gun***
 ```
 Shoot two portals at most, if a third is shot, the first will disapear
+The portal gun shoot at the angle the mouse aiming at
 If the player collide with either of the portal, she will be transfered to the other portal's position.
 furthur implementation: transfer moving object like bullet.
                         after transfering, keeps the force applied previously
