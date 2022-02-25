@@ -70,7 +70,9 @@ start point-->|      house      |
 ***Level5***
 ```
 The Final Tower. Puzzle stage with the portal gun.
-
+Will not have monster since the player lost the wand in level4
+player needs to make full use of the portal gun's ability and dashing
+the lower tower are not designed since we have no idea how further the portal gun can work
 
 map(inside the room and drop from the little basement):
               |   start point   |
