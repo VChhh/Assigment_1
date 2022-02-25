@@ -4,7 +4,7 @@
 ***Texture and Sprite needed***
 ```
 Monsters: spider(jump and walk), bat(fly), fort shooting bullet
-Structure: Rock, dirt with grass covered on top, block, vine made ladder, cloud
+Structure: Rock, dirt with grass covered on top, block, vine made ladder, spike trap, cloud
 Items: wand with its bullet, 4 keys and gates with different color, door for hidden room
 ```
 
@@ -54,6 +54,7 @@ start point |
 The Giant's Room. Puzzle level with a little bit fight
 To complete the level, player need to find different keys to open related gate(inspired from your exercise 3)
 There will be spiders above the ceiling and fort guarding one gate
+After opening the last gate, u will get a portal gun that can shoot portal(at most two portal), and lose ur wand, then goes into level5
 
 map(inside the room and drop from the little basement):
               |                 |
@@ -64,6 +65,21 @@ start point-->|      house      |
               ----final gate-----
                       |
                     level 5
+```
+
+***Level5***
+```
+The Final Tower. Puzzle stage with the portal gun.
+
+
+map(inside the room and drop from the little basement):
+              |   start point   |
+              |-----------------|
+              |                 |
+              |                 |
+              |                 |
+              --------end--------
+
 ```
 
      
