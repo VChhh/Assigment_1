@@ -8,6 +8,13 @@ Structure: Rock, dirt with grass covered on top, block, vine made ladder, spike 
 Items: wand with its bullet, 4 keys and gates with different color, door for hidden room
 ```
 
+***Monster***
+```
+Monster goes toward the player when the distance between the player and itself is less than a certain value
+Monster can be killed by the wand's bullet
+Monster instantly kill the player by colliding
+```
+
 ***Level1***
 ```
 Intro for the game. Introduce basic control and machnique to the player
@@ -25,7 +32,7 @@ hidden <-- start point --> jungle --> mountain  |--> hidden
 ```
 Into the cave. Gain dashing and shooting skill.
 At the begining of this level, there will be 2 minecart with boot/wand separatly. If you pick the wand, the minecart with boot will drive down the slope, vice versa.
-If you pick the wand at first, u will be able to fight monster but cannot enter hidden requiring dashing. Otherwise if u pick the boot, u cannot fight the monster but only esacpe. Evetually u will get both of them at the bottom(the minecart drive down).
+If you pick the wand at first, u will be able to fight monster but cannot enter hidden requiring dashing. Otherwise if u pick the boot, u cannot fight the monster but only esacpe. Evetually u will get both of them at the bottom(the minecart drive down). A wind blowing up will make you leave the mountain and go into the sky(level3).
 
 map(from inside to the sky):
 
