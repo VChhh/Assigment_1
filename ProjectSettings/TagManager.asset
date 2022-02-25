@@ -9,6 +9,7 @@ TagManager:
   - trap
   - hidden
   - collectibles
+  - gate
   layers:
   - Default
   - TransparentFX
