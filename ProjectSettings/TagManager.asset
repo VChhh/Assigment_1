@@ -8,6 +8,7 @@ TagManager:
   - item
   - trap
   - hidden
+  - collectibles
   layers:
   - Default
   - TransparentFX
