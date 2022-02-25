@@ -18,7 +18,7 @@ map(outside to the inside of the mountain):
 
 hidden <-- start point --> jungle --> mountain  |--> hidden
                                                 |--> cave --> level2
-                                                      |--> hidden
+                                             hidden <--|
 ```
 
 ***Level2***
