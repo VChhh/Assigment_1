@@ -22,7 +22,10 @@ public class player_control : MonoBehaviour
 
     private void FixedUpdate() {
         grounded = Physics2D.OverlapCircle(feet.position, ground_check_dist, ground); // check if grounded
+        _at.SetBool("Grounded", grounded);  
     }
+
+
 
     void Update()
     {
