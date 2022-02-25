@@ -19,11 +19,11 @@ public class portal_gun : MonoBehaviour
     void Update()
     {
         if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)){
-            Vector2 position = Input.mousePosition;
-            RaycastHit2D hit = new RaycastHit2D();
-            if(Physics2D.Linecast(transform.position, position * gunRange, 1)){
+            // Vector2 position = Input.mousePosition;
+            // RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            // if(Physics2D.Linecast(transform.position, position * gunRange, 1)){
 
-            }
+            // }
         }
     }
 }
