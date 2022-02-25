@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class grounded_enemy_ai : MonoBehaviour
+public class flying_enemy_ai : MonoBehaviour
 {
-    // Start is called before the first frame update
     public Rigidbody2D _player_rb;
     Rigidbody2D _rb;
     public int chasing_dist = 10;
@@ -27,19 +26,18 @@ public class grounded_enemy_ai : MonoBehaviour
     }
     void Update()
     {
-        if(!grounded || (Mathf.Abs(_rb.position.y - _player_rb.position.y) <= chase_y_check) && 
-          (Vector2.Distance(_rb.position, _player_rb.position) <= chasing_dist)){ 
-            float xSpeed = _rb.position.x < _player_rb.position.x ? speed_const : -speed_const;
-            _rb.position = new Vector2(_rb.position.x + xSpeed * 0.001f, _rb.position.y);
-            if(grounded){
-                StartCoroutine(Wait(.5f));
-                _rb.AddForce(new Vector2(0, jump_const));
-            }
+        if(Vector2.Distance(_rb.position, _player_rb.position) <= chasing_dist){ 
+            Vector2 direction = _player_rb.position - _rb.position;
+            direction.Normalize();
+            _rb.velocity = direction * speed_const;
+        }
+        if(grounded){
+            _rb.AddForce(new Vector2(0, jump_const));
+            // StartCoroutine(Wait(2f)); // use wait to adjust the shaking when grounded
         }
     }
 
     IEnumerator Wait(float t){
         yield return new WaitForSeconds(t);
     }
-    
 }
