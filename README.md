@@ -4,7 +4,7 @@
 ***Texture and Sprite needed***
 ```
 Monsters: spider(jump and walk), bat(fly), fort shooting bullet
-Structure: Rock, dirt with grass covered on top, block, vine made ladder, cloud
+Structure: Rock, dirt with grass covered on top, block, vine made ladder, spike trap, cloud
 Items: wand with its bullet, 4 keys and gates with different color, door for hidden room
 ```
 
@@ -65,6 +65,21 @@ start point-->|      house      |
               ----final gate-----
                       |
                     level 5
+```
+
+***Level5***
+```
+The Final Tower. Puzzle stage with the portal gun.
+
+
+map(inside the room and drop from the little basement):
+              |   start point   |
+              |-----------------|
+              |                 |
+              |                 |
+              |                 |
+              --------end--------
+
 ```
 
      
