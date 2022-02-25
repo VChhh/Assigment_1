@@ -7,7 +7,6 @@ public class player_control : MonoBehaviour
     public int speed_const = 10;
     public int jump_const = 500;
     Rigidbody2D _rb;
-
     Animator _at;
     public LayerMask ground;
     public Transform feet;
