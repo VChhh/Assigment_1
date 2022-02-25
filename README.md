@@ -15,6 +15,14 @@ Monster can be killed by the wand's bullet
 Monster instantly kill the player by colliding
 ```
 
+***Portal Gun***
+```
+Shoot two portals at most, if a third is shot, the first will disapear
+If the player collide with either of the portal, she will be transfered to the other portal's position.
+furthur implementation: transfer moving object like bullet.
+                        after transfering, keeps the force applied previously
+```
+
 ***Level1***
 ```
 Intro for the game. Introduce basic control and machnique to the player
