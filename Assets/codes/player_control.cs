@@ -11,7 +11,7 @@ public class player_control : MonoBehaviour
     public LayerMask ground;
     public Transform feet;
     float ground_check_dist = .2f;
-    bool grounded = false;
+    public bool grounded = false;
     
     void Start()
     {

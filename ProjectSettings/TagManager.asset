@@ -10,6 +10,7 @@ TagManager:
   - hidden
   - collectibles
   - gate
+  - ladder
   layers:
   - Default
   - TransparentFX

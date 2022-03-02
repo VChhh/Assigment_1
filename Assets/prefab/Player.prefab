@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5392110384901546867}
   - component: {fileID: 5392110384901546892}
   - component: {fileID: 5392110384901546893}
+  - component: {fileID: 2649384064095513242}
   - component: {fileID: 5392110384901546894}
   - component: {fileID: 5392110384901546865}
   - component: {fileID: 5392110384901546864}
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 889389284, guid: 9035566fbf4de9146b09cca91e171ffd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -108,6 +109,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   feet: {fileID: 5392110385579292212}
+  grounded: 0
+--- !u!114 &2649384064095513242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5392110384901546895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9554216c1e97b2046bc49e3cafdf198a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  climb_const: 1
+  climb_jump_const: 150
 --- !u!50 &5392110384901546894
 Rigidbody2D:
   serializedVersion: 4
