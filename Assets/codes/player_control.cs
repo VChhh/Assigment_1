@@ -6,17 +6,28 @@ public class player_control : MonoBehaviour
 {
     public int speed_const = 10;
     public int jump_const = 500;
+    public float dash_force;
+    private float origin_dash_time;
+    public float dash_time;
+    private float origin_cooldown;
+    public float dash_cooldown = 1;
+
     Rigidbody2D _rb;
     Animator _at;
     public LayerMask ground;
     public Transform feet;
     float ground_check_dist = .2f;
     public bool grounded = false;
+    public bool dashing = false;
+    public bool dashable = false;
+    private float direction;
     
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _at = GetComponent<Animator>();
+        origin_dash_time = dash_time;
+        origin_cooldown = dash_cooldown;
     }
 
     private void FixedUpdate() {
@@ -40,6 +51,34 @@ public class player_control : MonoBehaviour
 
         if(xSpeed > 0 && transform.localScale.x > 0 || xSpeed < 0 && transform.localScale.x < 0){
             transform.localScale *= new Vector2(-1, 1);
+        }
+
+
+        if(dashable){
+            if(dashing)
+            {
+                _rb.velocity = transform.right * direction * dash_force;
+                dash_time -= Time.deltaTime;
+
+                if(dash_time <= 0){
+                    dashing = false;
+                }
+            }//dashing
+            else if(!dashing && dash_cooldown > 0){
+                dash_cooldown -= Time.deltaTime;
+            }//cooldown
+            else if(Input.GetKeyDown("left shift") && xSpeed != 0){
+                dashing = true;
+                dash_cooldown = origin_cooldown;
+                dash_time = origin_dash_time;
+                _rb.velocity = Vector2.zero;
+                direction = (int)xSpeed;
+            }//start to dash
+
+
+
+
+
         }
     }
 

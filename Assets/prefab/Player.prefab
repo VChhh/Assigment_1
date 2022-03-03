@@ -107,11 +107,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed_const: 5
   jump_const: 350
+  dash_force: 5
+  dash_time: 0.15
+  dash_cooldown: 0.5
   ground:
     serializedVersion: 2
     m_Bits: 256
   feet: {fileID: 5392110385579292212}
   grounded: 0
+  dashing: 0
+  cooling: 0
+  dashable: 1
 --- !u!114 &2649384064095513242
 MonoBehaviour:
   m_ObjectHideFlags: 0
