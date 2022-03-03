@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1085908710286251457}
   - component: {fileID: 1085908710286251456}
-  - component: {fileID: 1085908710286251463}
+  - component: {fileID: 769534242608549967}
   m_Layer: 0
   m_Name: coin
   m_TagString: collectibles
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1085908710286251463
+--- !u!58 &769534242608549967
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -24,7 +24,7 @@ public class PlayerStats : MonoBehaviour
                         + "\nScores: " + PublicVars.scores;
     }
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("collectibles")){
             PublicVars.coins ++;
             PublicVars.scores += 100;
@@ -36,7 +36,6 @@ public class PlayerStats : MonoBehaviour
             PublicVars.scores += 150;
             display();
         }
-        
     }
     // Update is called once per frame
     void FixedUpdate()
