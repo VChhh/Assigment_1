@@ -25,7 +25,7 @@ public class PlayerStats : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.CompareTag("collectiables")){
+        if(other.CompareTag("collectibles")){
             PublicVars.coins ++;
             PublicVars.scores += 100;
             Destroy(other.gameObject);

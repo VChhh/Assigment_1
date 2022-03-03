@@ -8,7 +8,7 @@ public class ladder : MonoBehaviour
     // imcomplete version, use ladder_movement which attaches to player instead
     public int ladder_jump_const = 300;
     public float climbing_const = 0.01f;
-    private float initial_grav;
+    private float initial_grav = 1;
     private bool is_player = false;
     private bool player_present = false;
     private bool is_on_ladder = false;
@@ -26,7 +26,7 @@ public class ladder : MonoBehaviour
 
     private void Update() {
         if(!is_on_ladder){
-            _player_rb.gravityScale = initial_grav;
+            //_player_rb.gravityScale = initial_grav;
         }
         if(is_player && player_present && Input.GetAxis("Vertical") != 0){
             if(!is_on_ladder){
