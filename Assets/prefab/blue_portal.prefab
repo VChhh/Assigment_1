@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1605342026985443994}
   - component: {fileID: 1605342026985443997}
   - component: {fileID: 1605342026985443996}
-  - component: {fileID: 1605342026985443995}
+  - component: {fileID: 8566011924512648865}
   m_Layer: 0
   m_Name: blue_portal
   m_TagString: blue_portal
@@ -100,8 +100,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   is_orange: 0
   teleport_dist: 0.2
---- !u!58 &1605342026985443995
-CircleCollider2D:
+  dst: {fileID: 0}
+  able_to_teleport: 0
+--- !u!70 &8566011924512648865
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -113,6 +115,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.020393848, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.29852295
+  m_Offset: {x: 0.0029232502, y: 0}
+  m_Size: {x: 0.16397333, y: 2}
+  m_Direction: 0

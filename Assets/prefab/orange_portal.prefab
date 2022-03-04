@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1093072947374663981}
   - component: {fileID: 1738411687163386368}
   - component: {fileID: 1738411687163386369}
-  - component: {fileID: 1738411687163386374}
+  - component: {fileID: 7452748495773772944}
   m_Layer: 0
   m_Name: orange_portal
   m_TagString: orange_portal
@@ -100,8 +100,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   is_orange: 1
   teleport_dist: 0.2
---- !u!58 &1738411687163386374
-CircleCollider2D:
+  dst: {fileID: 0}
+  able_to_teleport: 0
+--- !u!70 &7452748495773772944
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -113,6 +115,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0065954924, y: -0.07255119}
-  serializedVersion: 2
-  m_Radius: 0.3272518
+  m_Offset: {x: 0.0062857866, y: -0.0031428933}
+  m_Size: {x: 0.2582705, y: 1.9937142}
+  m_Direction: 0
