@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class player_control : MonoBehaviour
 {
+    bool isAlive = true;
     public int speed_const = 10;
     public int jump_const = 500;
     //===========grab============
@@ -87,7 +89,11 @@ public class player_control : MonoBehaviour
         // mousePos = cam.ScreenToViewportPoint(Input.mousePosition);
 
 
-
+        if (isAlive && transform.position.y < -17)
+        {
+            isAlive = false;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
 
         // horizontal movement
         float xSpeed = Input.GetAxis("Horizontal") * speed_const;
