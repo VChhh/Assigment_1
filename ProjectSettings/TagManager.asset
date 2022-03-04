@@ -11,6 +11,8 @@ TagManager:
   - collectibles
   - gate
   - ladder
+  - blue_portal
+  - orange_portal
   layers:
   - Default
   - TransparentFX
