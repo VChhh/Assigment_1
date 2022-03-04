@@ -13,6 +13,9 @@ public class player_control : MonoBehaviour
     public float dash_cooldown = 1;
     private int dash_limit = 1;
 
+    private Vector2 mousePos;
+
+    public Camera tranCam;
     Rigidbody2D _rb;
     Animator _at;
     public LayerMask ground;
@@ -34,12 +37,17 @@ public class player_control : MonoBehaviour
     private void FixedUpdate() {
         grounded = Physics2D.OverlapCircle(feet.position, ground_check_dist, ground); // check if grounded
         _at.SetBool("Grounded", grounded);  
+
+        Vector2 lookDirection = mousePos - _rb.position;
+        float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
     }
 
 
 
     void Update()
     {
+        mousePos = tranCam.ScreenToWorldPoint(Input.mousePosition);
+
         // horizontal movement
         float xSpeed = Input.GetAxis("Horizontal") * speed_const;
         _rb.velocity = new Vector2(xSpeed, _rb.velocity.y);
@@ -81,13 +89,9 @@ public class player_control : MonoBehaviour
                 _rb.velocity = Vector2.zero;
                 direction = (int)xSpeed;
             }//start to dash
-
-
-
-
-
         }
     }
+
 
 
 }
