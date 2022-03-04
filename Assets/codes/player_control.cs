@@ -94,11 +94,11 @@ public class player_control : MonoBehaviour
         // mousePos = cam.ScreenToViewportPoint(Input.mousePosition);
 
 
-        if (isAlive && transform.position.y < -100)
-        {
-            isAlive = false;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+        // if (isAlive && transform.position.y < -100)
+        // {
+        //     isAlive = false;
+        //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // }
 
         // horizontal movement
         float xSpeed = Input.GetAxis("Horizontal") * speed_const;
