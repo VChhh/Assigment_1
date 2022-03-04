@@ -13,6 +13,9 @@ TagManager:
   - ladder
   - blue_portal
   - orange_portal
+  - monster
+  - wand
+  - boot
   layers:
   - Default
   - TransparentFX
