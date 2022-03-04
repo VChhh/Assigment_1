@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class portal : MonoBehaviour
 {
-    // still testing, not complete yet
-    // will complete next week
-    public GameObject dst;
-    bool is_overlapping = false;
-    private void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("Player") && !is_overlapping){
-            other.transform.position = dst.transform.position;
-            is_overlapping = true;
+    public bool is_orange;
+    public float teleport_dist = 0.2f;
+    Transform dst;
+    private void Start() {
+        if(is_orange){
+            dst = GameObject.FindGameObjectWithTag("blue_portal").GetComponent<Transform>();
+        } else {
+            dst = GameObject.FindGameObjectWithTag("orange_portal").GetComponent<Transform>();
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other) {
-        is_overlapping = false;
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(Vector2.Distance(transform.position, other.transform.position) > teleport_dist){
+            other.transform.position = new Vector2(dst.position.x, dst.position.y);
+        }
     }
 
 }
