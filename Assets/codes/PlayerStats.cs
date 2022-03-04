@@ -37,6 +37,33 @@ public class PlayerStats : MonoBehaviour
             display();
         }
     }
+
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.CompareTag("trap")){
+            if(PublicVars.cur_level == 1){
+                PublicVars.scores -= 1000;
+                SceneManager.LoadScene("Level_1");
+
+            }
+            else if(PublicVars.cur_level == 2){
+                PublicVars.scores -= 1000;
+                SceneManager.LoadScene("Level_2");
+            }
+            else if(PublicVars.cur_level == 3){
+                PublicVars.scores -= 1000;
+                SceneManager.LoadScene("Level_3");
+            }
+            else if(PublicVars.cur_level == 4){
+                PublicVars.scores -= 1000;
+                SceneManager.LoadScene("Level_4");
+            }
+            else if(PublicVars.cur_level == 5){
+                PublicVars.scores -= 1000;
+                SceneManager.LoadScene("Level_5");
+            }
+        }
+    }
     // Update is called once per frame
     void FixedUpdate()
     {

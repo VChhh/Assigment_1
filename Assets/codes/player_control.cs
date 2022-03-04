@@ -6,6 +6,10 @@ public class player_control : MonoBehaviour
 {
     public int speed_const = 10;
     public int jump_const = 500;
+    //===========grab============
+    public Transform hand;
+
+    //============dash================
     public float dash_force;
     private float origin_dash_time;
     public float dash_time;
@@ -14,7 +18,7 @@ public class player_control : MonoBehaviour
     private int dash_limit = 1;
 
 
-    //=============================
+    //============shoot=================
     public bool shootable = true;
     public GameObject bulletPrefab;
     public float bulletSpd = 20f;
@@ -51,17 +55,39 @@ public class player_control : MonoBehaviour
     private void FixedUpdate() {
         grounded = Physics2D.OverlapCircle(feet.position, ground_check_dist, ground); // check if grounded
         _at.SetBool("Grounded", grounded);  
-
         // shoot_direction = -(mousePos - _rb.position);
         //angle = Mathf.Atan2(shoot_direction.y, shoot_direction.x) * Mathf.Rad2Deg - 90f;
 
+
+        if(Input.GetKeyDown("e") && shootable){
+            hand.gameObject.transform.GetChild(0).parent = null;
+            shootable = false;
+        }
+        else if(Input.GetKeyDown("q") && dashable){
+            feet.gameObject.transform.GetChild(0).parent = null;
+            dashable = false;
+        }
     }
 
 
-
+    private void OnTriggerStay2D(Collider2D other) {
+        if(other.CompareTag("wand") && Input.GetKeyDown("e")){
+            other.gameObject.transform.position = hand.position;
+            other.gameObject.transform.parent = hand;
+            shootable = true;
+        }
+        else if(other.CompareTag("boot") && Input.GetKeyDown("q")){
+            other.gameObject.transform.position = feet.position;
+            other.gameObject.transform.parent = feet;
+            dashable = true;
+        }
+    }
     void Update()
     {
         // mousePos = cam.ScreenToViewportPoint(Input.mousePosition);
+
+
+
 
         // horizontal movement
         float xSpeed = Input.GetAxis("Horizontal") * speed_const;
