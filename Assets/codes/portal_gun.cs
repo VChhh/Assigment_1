@@ -5,25 +5,44 @@ using UnityEngine;
 public class portal_gun : MonoBehaviour
 {
     public float gunRange = 1000;
-    private portal[] portals;
+    public Transform aim_point;
+    public GameObject orange_portal_prefab;
+    public GameObject blue_portal_prefab;
+    private GameObject orange_portal;
+    private GameObject blue_portal;
 
-    void Start()
-    {
-        portals = GameObject.FindObjectsOfType<portal>();
-        if(portals.Length != 2){
-            Debug.LogError("portals not attached");
+    private bool orange_exist = false;
+    private bool blue_exist = false;
+
+    private void Update() {
+        if(Vector2.Distance(aim_point.position, transform.position) < gunRange){
+            if(Input.GetButtonDown("Fire1")){
+                if(blue_exist){
+                    Destroy(blue_portal);
+                }
+                blue_portal = Instantiate(blue_portal_prefab, aim_point.position, aim_point.rotation);
+                blue_exist = true;
+                if(orange_exist && blue_exist){
+                    blue_portal.GetComponent<portal>().get_dst();
+                    orange_portal.GetComponent<portal>().get_dst();
+                }
+                
+                
+            }
+            if(Input.GetButtonDown("Fire2")){
+                if(orange_exist){
+                    Destroy(orange_portal);
+                }
+                orange_portal = Instantiate(orange_portal_prefab, aim_point.position, aim_point.rotation);
+                orange_exist = true;
+                if(orange_exist && blue_exist){
+                    blue_portal.GetComponent<portal>().get_dst();
+                    orange_portal.GetComponent<portal>().get_dst();
+                }
+                
+            }
         }
     }
 
 
-    void Update()
-    {
-        if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)){
-            // Vector2 position = Input.mousePosition;
-            // RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            // if(Physics2D.Linecast(transform.position, position * gunRange, 1)){
-
-            // }
-        }
-    }
 }
