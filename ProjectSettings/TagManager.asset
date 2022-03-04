@@ -16,6 +16,7 @@ TagManager:
   - monster
   - wand
   - boot
+  - key
   layers:
   - Default
   - TransparentFX

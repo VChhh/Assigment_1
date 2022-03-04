@@ -41,6 +41,9 @@ public class PlayerStats : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.CompareTag("trap")){
+            if(SceneManager.GetActiveScene().name == "test"){
+                SceneManager.LoadScene("test");
+            }
             if(PublicVars.cur_level == 1){
                 PublicVars.scores -= 1000;
                 SceneManager.LoadScene("Level_1");
