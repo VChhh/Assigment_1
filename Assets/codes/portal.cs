@@ -21,9 +21,15 @@ public class portal : MonoBehaviour
 
     public void get_dst(){
         if(is_orange){
-            dst = GameObject.FindGameObjectWithTag("blue_portal").GetComponent<Transform>();
+            try{
+                dst = GameObject.FindGameObjectWithTag("blue_portal").GetComponent<Transform>();
+            }
+            catch{}
         } else {
-            dst = GameObject.FindGameObjectWithTag("orange_portal").GetComponent<Transform>();
+            try{
+                dst = GameObject.FindGameObjectWithTag("orange_portal").GetComponent<Transform>();
+            }
+            catch{}
         }
     }
 
