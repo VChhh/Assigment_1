@@ -73,6 +73,7 @@ public class player_control : MonoBehaviour
 
 
     private void OnTriggerStay2D(Collider2D other) {
+        //grab
         if(other.CompareTag("wand") && Input.GetKeyDown("e")){
             other.gameObject.transform.position = hand.position;
             other.gameObject.transform.parent = hand;
@@ -82,6 +83,10 @@ public class player_control : MonoBehaviour
             other.gameObject.transform.position = feet.position;
             other.gameObject.transform.parent = feet;
             dashable = true;
+        }
+        else if(other.CompareTag("key") && Input.GetKeyDown("e")){
+            other.gameObject.transform.position = hand.position;
+            other.gameObject.transform.parent = hand;
         }
     }
     void Update()
