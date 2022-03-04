@@ -13,9 +13,22 @@ public class player_control : MonoBehaviour
     public float dash_cooldown = 1;
     private int dash_limit = 1;
 
-    private Vector2 mousePos;
 
-    public Camera tranCam;
+    //=============================
+    public bool shootable = true;
+    public GameObject bulletPrefab;
+    public float bulletSpd = 20f;
+
+    // public Camera cam;
+    // private Vector2 mousePos;
+    // public Vector2 shoot_direction;
+
+    public float shoot_cool = 1;
+
+
+
+
+    //===========================
     Rigidbody2D _rb;
     Animator _at;
     public LayerMask ground;
@@ -24,8 +37,9 @@ public class player_control : MonoBehaviour
     public bool grounded = false;
     public bool dashing = false;
     public bool dashable = false;
+
     private float direction;
-    
+
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -38,15 +52,16 @@ public class player_control : MonoBehaviour
         grounded = Physics2D.OverlapCircle(feet.position, ground_check_dist, ground); // check if grounded
         _at.SetBool("Grounded", grounded);  
 
-        Vector2 lookDirection = mousePos - _rb.position;
-        float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
+        // shoot_direction = -(mousePos - _rb.position);
+        //angle = Mathf.Atan2(shoot_direction.y, shoot_direction.x) * Mathf.Rad2Deg - 90f;
+
     }
 
 
 
     void Update()
     {
-        mousePos = tranCam.ScreenToWorldPoint(Input.mousePosition);
+        // mousePos = cam.ScreenToViewportPoint(Input.mousePosition);
 
         // horizontal movement
         float xSpeed = Input.GetAxis("Horizontal") * speed_const;
@@ -90,6 +105,22 @@ public class player_control : MonoBehaviour
                 direction = (int)xSpeed;
             }//start to dash
         }
+
+
+
+    //shoot
+        if(shootable){
+            if(shoot_cool > 0){
+                shoot_cool -= Time.deltaTime;
+            }
+            else if(Input.GetButtonDown("Fire1")){
+                shoot_cool = 1;
+                GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+                bullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpd * -transform.localScale.x, 0));
+            }
+        }
+
+
     }
 
 
