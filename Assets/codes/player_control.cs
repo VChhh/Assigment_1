@@ -50,6 +50,8 @@ public class player_control : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _at = GetComponent<Animator>();
+        _at.SetBool("dashable", false);
+        _at.SetBool("shootable", false);
         origin_dash_time = dash_time;
         origin_cooldown = dash_cooldown;
     }
@@ -61,13 +63,19 @@ public class player_control : MonoBehaviour
         //angle = Mathf.Atan2(shoot_direction.y, shoot_direction.x) * Mathf.Rad2Deg - 90f;
 
 
-        if(Input.GetKeyDown("e") && shootable){
-            hand.gameObject.transform.GetChild(0).parent = null;
-            shootable = false;
+        // if(Input.GetKeyDown("e") && shootable){
+        //     hand.gameObject.transform.GetChild(0).parent = null;
+        //     shootable = false;
+        // }
+        // else if(Input.GetKeyDown("q") && dashable){
+        //     feet.gameObject.transform.GetChild(0).parent = null;
+        //     dashable = false;
+        // }
+        if(shootable){
+            _at.SetBool("shootable", true);
         }
-        else if(Input.GetKeyDown("q") && dashable){
-            feet.gameObject.transform.GetChild(0).parent = null;
-            dashable = false;
+        if(dashable){
+            _at.SetBool("dashable", true);
         }
     }
 
@@ -79,12 +87,20 @@ public class player_control : MonoBehaviour
             other.gameObject.transform.parent = hand;
             shootable = true;
         }
-        else if(other.CompareTag("boot") && Input.GetKeyDown("q")){
-            other.gameObject.transform.position = feet.position;
-            other.gameObject.transform.parent = feet;
+        else if(other.CompareTag("boot") && Input.GetKeyDown("e")){
+            // other.gameObject.transform.position = feet.position;
+            // other.gameObject.transform.parent = feet;
             dashable = true;
+            _at.SetBool("dashable", true);
+            Destroy(other.gameObject);
         }
-        else if(other.CompareTag("key") && Input.GetKeyDown("e")){
+        // else if(other.CompareTag("portalgun") && Input.GetKeyDown("e")){
+        //     shootable = false;
+        //     _at.SetBool("shootable", false);
+        // }
+
+
+        if(other.CompareTag("key") && Input.GetKeyDown("e")){
             other.gameObject.transform.position = hand.position;
             other.gameObject.transform.parent = hand;
         }
