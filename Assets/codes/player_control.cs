@@ -89,6 +89,8 @@ public class player_control : MonoBehaviour
             other.gameObject.transform.parent = hand;
         }
     }
+
+
     void Update()
     {
         // mousePos = cam.ScreenToViewportPoint(Input.mousePosition);
@@ -154,10 +156,12 @@ public class player_control : MonoBehaviour
                 shoot_cool = 1;
                 GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
                 bullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpd * -transform.localScale.x, 0));
+                Destroy(bullet, 3f);
+
             }
         }
 
-
+    
     }
 
 
