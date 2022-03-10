@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class start_menu : MonoBehaviour
 {
     public void StartGame(){
-        Time.timeScale = 1;
         SceneManager.LoadScene("level_1");
     }
 
