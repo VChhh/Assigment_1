@@ -48,6 +48,7 @@ public class player_control : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = false;
         _rb = GetComponent<Rigidbody2D>();
         _at = GetComponent<Animator>();
         origin_dash_time = dash_time;
