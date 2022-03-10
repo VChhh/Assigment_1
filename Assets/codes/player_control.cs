@@ -24,6 +24,8 @@ public class player_control : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletSpd = 20f;
 
+    public Transform handPos;
+
     // public Camera cam;
     // private Vector2 mousePos;
     // public Vector2 shoot_direction;
@@ -159,9 +161,10 @@ public class player_control : MonoBehaviour
             }
             else if(Input.GetButtonDown("Fire1")){
                 shoot_cool = 1;
-                GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+                GameObject bullet = Instantiate(bulletPrefab, handPos.position, Quaternion.identity);
                 bullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpd * -transform.localScale.x, 0));
-                Destroy(bullet, 3f);
+
+                //Destroy(bullet, 3f);
 
             }
         }

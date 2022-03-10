@@ -22,6 +22,19 @@ public class PlayerStats : MonoBehaviour
 
     void display(){
         string high = "";
+        //store current score
+        if(PublicVars.cur_level == 1 && PublicVars.cur_score > PublicVars.level1High)
+            PublicVars.level1High = PublicVars.cur_score;
+        else if(PublicVars.cur_level == 2 && PublicVars.cur_score > PublicVars.level2High)
+            PublicVars.level2High = PublicVars.cur_score;
+        else if(PublicVars.cur_level == 3 && PublicVars.cur_score > PublicVars.level3High)
+            PublicVars.level3High = PublicVars.cur_score;
+        else if(PublicVars.cur_level == 4 && PublicVars.cur_score > PublicVars.level4High)
+            PublicVars.level4High = PublicVars.cur_score;
+        else if(PublicVars.cur_level == 5 && PublicVars.cur_score > PublicVars.level5High)
+            PublicVars.level5High = PublicVars.cur_score;
+        
+        //change display info
         if(PublicVars.cur_level == 1)
             high = "\nhighest score for level 1: " + PublicVars.level1High;
         else if(PublicVars.cur_level == 2)
@@ -33,7 +46,8 @@ public class PlayerStats : MonoBehaviour
         else if(PublicVars.cur_level == 5)
             high = "\nhighest score for level 5: " + PublicVars.level5High;
 
-        
+
+        //display
         playStats.text = "Level " + PublicVars.cur_level
                         + "\ncur_score: " + PublicVars.cur_score
                         + high;
@@ -56,7 +70,6 @@ public class PlayerStats : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.CompareTag("trap")){
-            print("a");
             PublicVars.cur_score -= 300;
             transform.position = PublicVars.checkPoint;
             display();
@@ -69,17 +82,7 @@ public class PlayerStats : MonoBehaviour
     
         //syn the level number
         PublicVars.cur_level = SceneManager.GetActiveScene().name[6] - '0';
-        //store current score
-        if(PublicVars.cur_level == 1 && PublicVars.cur_score > PublicVars.level1High)
-            PublicVars.level1High = PublicVars.cur_score;
-        else if(PublicVars.cur_level == 2 && PublicVars.cur_level > PublicVars.level2High)
-            PublicVars.level2High = PublicVars.cur_score;
-        else if(PublicVars.cur_level == 3 && PublicVars.cur_level > PublicVars.level3High)
-            PublicVars.level3High = PublicVars.cur_score;
-        else if(PublicVars.cur_level == 4 && PublicVars.cur_level > PublicVars.level4High)
-            PublicVars.level4High = PublicVars.cur_score;
-        else if(PublicVars.cur_level == 5 && PublicVars.cur_level > PublicVars.level5High)
-            PublicVars.level5High = PublicVars.cur_score;
+
             
     }
 }

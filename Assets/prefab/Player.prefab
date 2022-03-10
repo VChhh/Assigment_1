@@ -2763,8 +2763,9 @@ MonoBehaviour:
   dash_force: 5
   dash_time: 0.15
   dash_cooldown: 0.5
-  bulletPrefab: {fileID: 5720219603103652948, guid: c714f82cc3d96b045a1cdf34958c2bbe, type: 3}
+  bulletPrefab: {fileID: 8128542081128347935, guid: c714f82cc3d96b045a1cdf34958c2bbe, type: 3}
   bulletSpd: 500
+  handPos: {fileID: 6632916306537028072}
   shoot_cool: 1
   ground:
     serializedVersion: 2
