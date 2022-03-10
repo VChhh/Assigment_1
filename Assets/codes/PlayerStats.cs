@@ -15,14 +15,29 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
+        PublicVars.cur_level = SceneManager.GetActiveScene().name[6] - '0';
         display();
         PublicVars.checkPoint = transform.position;
     }
 
     void display(){
+        string high = "";
+        if(PublicVars.cur_level == 1)
+            high = "\nhighest score for level 1: " + PublicVars.level1High;
+        else if(PublicVars.cur_level == 2)
+            high = "\nhighest score for level 2: " + PublicVars.level2High;
+        else if(PublicVars.cur_level == 3)
+            high = "\nhighest score for level 3: " + PublicVars.level3High;
+        else if(PublicVars.cur_level == 4)
+            high = "\nhighest score for level 4: " + PublicVars.level4High;
+        else if(PublicVars.cur_level == 5)
+            high = "\nhighest score for level 5: " + PublicVars.level5High;
+
+        
         playStats.text = "Level " + PublicVars.cur_level
                         + "\nCoins: " + PublicVars.coins 
-                        + "\nScores: " + PublicVars.scores;
+                        + "\nScores: " + PublicVars.scores
+                        + high;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -49,6 +64,6 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        PublicVars.cur_level = SceneManager.GetActiveScene().name[6] - '0';
     }
 }
