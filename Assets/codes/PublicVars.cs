@@ -12,4 +12,10 @@ public static class PublicVars
 
     public static int cur_level = 1;
 
+    public static bool dashable = false;
+
+    public static bool shootable = false;
+
+    public static Transform checkPoint = null;
+
 }
