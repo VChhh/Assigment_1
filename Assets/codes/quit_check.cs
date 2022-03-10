@@ -18,7 +18,7 @@ public class quit_check : MonoBehaviour
     }
     private void Update() {
         if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton1)){
-            SceneManager.LoadScene("title");
+            //SceneManager.LoadScene("title");
         }
     }
 }
