@@ -16,6 +16,6 @@ public static class PublicVars
 
     public static bool shootable = false;
 
-    public static Transform checkPoint = null;
+    public static Vector3 checkPoint;
 
 }

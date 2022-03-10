@@ -16,6 +16,7 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         display();
+        PublicVars.checkPoint = transform.position;
     }
 
     void display(){
@@ -42,10 +43,7 @@ public class PlayerStats : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.CompareTag("trap")){
             PublicVars.scores -= 300;
-            if(PublicVars.checkPoint.position == null){
-                SceneManager.LoadScene("Level_" + PublicVars.cur_level);
-            }
-            transform.position = PublicVars.checkPoint.position;
+            transform.position = PublicVars.checkPoint;
         }
     }
     // Update is called once per frame

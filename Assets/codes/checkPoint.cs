@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class checkPoint : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    private Vector3 local_pos;
+    private ParticleSystem particle;
+
+    private void Start() {
+        local_pos = transform.position;
+        particle = transform.GetChild(0).gameObject.GetComponent<ParticleSystem>();
+        particle.Stop();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+    private void OnTriggerStay2D(Collider2D other) {
+        if(other.CompareTag("Player") && Input.GetKeyDown("e")){
+            PublicVars.checkPoint = local_pos;
+            particle.Play();
+        }
     }
 }
