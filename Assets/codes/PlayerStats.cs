@@ -42,35 +42,13 @@ public class PlayerStats : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.CompareTag("trap")){
-<<<<<<< HEAD
+
+
             PublicVars.scores -= 300;
             transform.position = PublicVars.checkPoint;
-=======
-            if(SceneManager.GetActiveScene().name == "test"){
-                SceneManager.LoadScene("test");
-            }
-            if(PublicVars.cur_level == 1){
-                PublicVars.scores -= 1000;
-                SceneManager.LoadScene("Level_1");
 
-            }
-            else if(PublicVars.cur_level == 2){
-                PublicVars.scores -= 1000;
-                SceneManager.LoadScene("Level_2");
-            }
-            else if(PublicVars.cur_level == 3){
-                PublicVars.scores -= 1000;
-                SceneManager.LoadScene("Level_3");
-            }
-            else if(PublicVars.cur_level == 4){
-                PublicVars.scores -= 1000;
-                SceneManager.LoadScene("Level_4");
-            }
-            else if(PublicVars.cur_level == 5){
-                PublicVars.scores -= 1000;
-                SceneManager.LoadScene("Level_5");
-            }
->>>>>>> parent of 0e688b5 (w)
+
+
         }
     }
     // Update is called once per frame
