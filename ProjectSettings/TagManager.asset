@@ -19,6 +19,7 @@ TagManager:
   - gem
   - b_gem
   - level_entry
+  - portalGun
   layers:
   - Default
   - TransparentFX

@@ -18,6 +18,16 @@ public class PlayerStats : MonoBehaviour
         PublicVars.cur_level = SceneManager.GetActiveScene().name[6] - '0';
         display();
         PublicVars.checkPoint = transform.position;
+        if(PublicVars.cur_level >= 3){
+            PublicVars.dashable = true;
+        }
+        if(transform.Find("wand")){
+            PublicVars.shootable = true;
+        }
+        if(transform.Find("portalGun")){
+            PublicVars.shootable = false;
+            PublicVars.portable = true;
+        }
     }
 
     void display(){
@@ -78,10 +88,11 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //syn the level score
+        
     
         //syn the level number
         PublicVars.cur_level = SceneManager.GetActiveScene().name[6] - '0';
+
 
             
     }
