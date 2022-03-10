@@ -2666,8 +2666,8 @@ GameObject:
   - component: {fileID: 5392110384901546894}
   - component: {fileID: 5392110384901546865}
   - component: {fileID: 1435646914553334034}
-  - component: {fileID: 5392110384901546864}
   - component: {fileID: 601944579}
+  - component: {fileID: 1627385994314116838}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -2843,38 +2843,6 @@ MonoBehaviour:
   killable:
     serializedVersion: 2
     m_Bits: 128
---- !u!60 &5392110384901546864
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5392110384901546895}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.2666667, y: 1.4}
-    newSize: {x: 1.2666667, y: 1.4}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.16804177, y: 0.56078196}
-      - {x: -0.4128511, y: 0.4567997}
-      - {x: -0.42073244, y: -0.70000005}
-      - {x: 0.16666667, y: -0.70000005}
-    - - {x: -0.25866142, y: -0.19509587}
-      - {x: 0.05899805, y: 0.41645274}
-      - {x: -0.25582016, y: 0.27071497}
 --- !u!114 &601944579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2889,6 +2857,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   climb_const: 3
   climb_jump_const: 300
+--- !u!61 &1627385994314116838
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5392110384901546895}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.09855366, y: -0.14783052}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.2666667, y: 1.4}
+    newSize: {x: 1.2666667, y: 1.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6122705, y: 1.1043391}
+  m_EdgeRadius: 0
 --- !u!1 &5392110385579292213
 GameObject:
   m_ObjectHideFlags: 0

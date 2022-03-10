@@ -35,23 +35,22 @@ public class PlayerStats : MonoBehaviour
 
         
         playStats.text = "Level " + PublicVars.cur_level
-                        + "\nCoins: " + PublicVars.coins 
                         + "\nScores: " + PublicVars.scores
                         + high;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("collectibles")){
-            PublicVars.coins ++;
+        if(other.CompareTag("gem")){
             PublicVars.scores += 100;
             Destroy(other.gameObject);
             display();
         }
-        else if(other.CompareTag("hidden")){
-            PublicVars.coins -= 50;
-            PublicVars.scores += 150;
+        else if(other.CompareTag("b_gem")){
+            PublicVars.scores += 300;
+            Destroy(other.gameObject);
             display();
         }
+
     }
 
 
