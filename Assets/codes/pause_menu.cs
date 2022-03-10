@@ -10,7 +10,7 @@ public class pause_menu : MonoBehaviour
     public GameObject level_selector_menu;
 
     private void Update() {
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton1)){
             if(is_paused){
                 Resume();
             }
@@ -25,6 +25,7 @@ public class pause_menu : MonoBehaviour
         level_selector_menu.SetActive(false);
         Time.timeScale = 1f;
         is_paused = false;
+        Cursor.visible = false;
     }
 
     public void Pause() {
