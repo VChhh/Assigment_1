@@ -16,6 +16,7 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         display();
+        PublicVars.checkPoint = transform.position;
     }
 
     void display(){
@@ -41,11 +42,35 @@ public class PlayerStats : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.CompareTag("trap")){
+<<<<<<< HEAD
             PublicVars.scores -= 300;
-            if(PublicVars.checkPoint.position == null){
-                SceneManager.LoadScene("Level_" + PublicVars.cur_level);
+            transform.position = PublicVars.checkPoint;
+=======
+            if(SceneManager.GetActiveScene().name == "test"){
+                SceneManager.LoadScene("test");
             }
-            transform.position = PublicVars.checkPoint.position;
+            if(PublicVars.cur_level == 1){
+                PublicVars.scores -= 1000;
+                SceneManager.LoadScene("Level_1");
+
+            }
+            else if(PublicVars.cur_level == 2){
+                PublicVars.scores -= 1000;
+                SceneManager.LoadScene("Level_2");
+            }
+            else if(PublicVars.cur_level == 3){
+                PublicVars.scores -= 1000;
+                SceneManager.LoadScene("Level_3");
+            }
+            else if(PublicVars.cur_level == 4){
+                PublicVars.scores -= 1000;
+                SceneManager.LoadScene("Level_4");
+            }
+            else if(PublicVars.cur_level == 5){
+                PublicVars.scores -= 1000;
+                SceneManager.LoadScene("Level_5");
+            }
+>>>>>>> parent of 0e688b5 (w)
         }
     }
     // Update is called once per frame

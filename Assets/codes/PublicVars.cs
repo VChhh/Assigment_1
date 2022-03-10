@@ -12,10 +12,13 @@ public static class PublicVars
 
     public static int cur_level = 1;
 
+<<<<<<< HEAD
     public static bool dashable = false;
 
     public static bool shootable = false;
 
-    public static Transform checkPoint = null;
+    public static Vector3 checkPoint;
 
+=======
+>>>>>>> parent of 0e688b5 (w)
 }
