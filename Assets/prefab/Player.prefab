@@ -2668,7 +2668,6 @@ GameObject:
   - component: {fileID: 1435646914553334034}
   - component: {fileID: 5392110384901546864}
   - component: {fileID: 601944579}
-  - component: {fileID: 7981372719574396127}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -2890,20 +2889,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   climb_const: 3
   climb_jump_const: 300
---- !u!114 &7981372719574396127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5392110384901546895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66de7ea47e9ba0b42981f0c62dabfb10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pausemenuIU: {fileID: 428501938}
-  level_selector_menu: {fileID: 505135752}
 --- !u!1 &5392110385579292213
 GameObject:
   m_ObjectHideFlags: 0
