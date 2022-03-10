@@ -35,18 +35,18 @@ public class PlayerStats : MonoBehaviour
 
         
         playStats.text = "Level " + PublicVars.cur_level
-                        + "\nScores: " + PublicVars.scores
+                        + "\ncur_score: " + PublicVars.cur_score
                         + high;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("gem")){
-            PublicVars.scores += 100;
+            PublicVars.cur_score += 100;
             Destroy(other.gameObject);
             display();
         }
         else if(other.CompareTag("b_gem")){
-            PublicVars.scores += 300;
+            PublicVars.cur_score += 300;
             Destroy(other.gameObject);
             display();
         }
@@ -56,13 +56,30 @@ public class PlayerStats : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.CompareTag("trap")){
-            PublicVars.scores -= 300;
+            print("a");
+            PublicVars.cur_score -= 300;
             transform.position = PublicVars.checkPoint;
+            display();
         }
     }
     // Update is called once per frame
     void FixedUpdate()
     {
+        //syn the level score
+    
+        //syn the level number
         PublicVars.cur_level = SceneManager.GetActiveScene().name[6] - '0';
+        //store current score
+        if(PublicVars.cur_level == 1 && PublicVars.cur_score > PublicVars.level1High)
+            PublicVars.level1High = PublicVars.cur_score;
+        else if(PublicVars.cur_level == 2 && PublicVars.cur_level > PublicVars.level2High)
+            PublicVars.level2High = PublicVars.cur_score;
+        else if(PublicVars.cur_level == 3 && PublicVars.cur_level > PublicVars.level3High)
+            PublicVars.level3High = PublicVars.cur_score;
+        else if(PublicVars.cur_level == 4 && PublicVars.cur_level > PublicVars.level4High)
+            PublicVars.level4High = PublicVars.cur_score;
+        else if(PublicVars.cur_level == 5 && PublicVars.cur_level > PublicVars.level5High)
+            PublicVars.level5High = PublicVars.cur_score;
+            
     }
 }

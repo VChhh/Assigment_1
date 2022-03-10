@@ -16,6 +16,7 @@ public static class PublicVars
     public static bool portable = false;
 
 //============score record================
+
     public static int level1High = 0;
     public static int level2High = 0;
     public static int level3High = 0;
