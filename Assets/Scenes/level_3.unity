@@ -2028,6 +2028,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2649384064095513242, guid: 53e4c72a5152fb649a77940c97269874, type: 3}
+      propertyPath: climb_const
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5392110384901546867, guid: 53e4c72a5152fb649a77940c97269874, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -3770,7 +3774,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8328912, y: 1}
+    m_SensorSize: {x: 2.1265702, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4018,7 +4022,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2139284916
 PrefabInstance:

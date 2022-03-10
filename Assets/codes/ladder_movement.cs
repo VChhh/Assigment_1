@@ -19,17 +19,6 @@ public class ladder_movement : MonoBehaviour
 
     void Update()
     {
-        climb_speed = Input.GetAxis("Vertical");
-        if(Mathf.Abs(climb_speed) > 0f && is_ladder){
-            is_climbing = true;
-        }
-        if(!GetComponent<player_control>().grounded && is_climbing && Input.GetButtonDown("Jump")){
-            _rb.AddForce(new Vector2(0, climb_jump_const));
-            is_climbing = false;
-        }
-    }
-
-    private void FixedUpdate() {
         if(is_climbing){
             _rb.gravityScale = 0;
             _rb.velocity = new Vector2(_rb.velocity.x, climb_speed * climb_const);
@@ -37,8 +26,25 @@ public class ladder_movement : MonoBehaviour
         else{
             _rb.gravityScale = initial_grav;
         }
+        climb_speed = Input.GetAxis("Vertical");
+        if(Mathf.Abs(climb_speed) > 0f && is_ladder){
+            is_climbing = true;
+            _rb.AddForce(new Vector2(0, climb_speed*climb_speed));
+        }
+
+        // climb jump
+        // unexpeted behavior, disabled for this version
+        // could be improved
+        /*
+        if(!GetComponent<player_control>().grounded && is_climbing && Input.GetButtonDown("Jump")){
+            is_climbing = false;
+            _rb.gravityScale = initial_grav;
+            _rb.velocity = new Vector2(_rb.velocity.x, 0);
+            _rb.AddForce(new Vector2(0, climb_jump_const));
+            
+        }
+        */
     }
-    
         private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("ladder")){
             is_ladder = true;
@@ -51,5 +57,10 @@ public class ladder_movement : MonoBehaviour
             is_ladder = false;
             is_climbing = false;
         }
+    }
+
+    IEnumerator ladder_jump(){
+        
+        yield return new WaitForSeconds(0.5f);
     }
 }
