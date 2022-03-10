@@ -12,12 +12,18 @@ public static class PublicVars
 
     public static int cur_level = 1;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 54a4e2f (a)
     public static bool dashable = false;
 
     public static bool shootable = false;
 
     public static Vector3 checkPoint;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 54a4e2f (a)
 }
