@@ -21,6 +21,7 @@ public class player_control : MonoBehaviour
 
 
     //============shoot=================
+    public bool shootable = true;
     public GameObject bulletPrefab;
     public float bulletSpd = 20f;
 
@@ -30,6 +31,9 @@ public class player_control : MonoBehaviour
 
     public float shoot_cool = 1;
 
+
+
+
     //===========================
     Rigidbody2D _rb;
     Animator _at;
@@ -38,6 +42,7 @@ public class player_control : MonoBehaviour
     float ground_check_dist = .2f;
     public bool grounded = false;
     public bool dashing = false;
+    public bool dashable = false;
 
     private float direction;
 
@@ -45,8 +50,6 @@ public class player_control : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _at = GetComponent<Animator>();
-        _at.SetBool("dashable", false);
-        _at.SetBool("shootable", false);
         origin_dash_time = dash_time;
         origin_cooldown = dash_cooldown;
     }
@@ -58,11 +61,13 @@ public class player_control : MonoBehaviour
         //angle = Mathf.Atan2(shoot_direction.y, shoot_direction.x) * Mathf.Rad2Deg - 90f;
 
 
-        if(PublicVars.shootable){
-            _at.SetBool("shootable", true);
+        if(Input.GetKeyDown("e") && shootable){
+            hand.gameObject.transform.GetChild(0).parent = null;
+            shootable = false;
         }
-        if(PublicVars.dashable){
-            _at.SetBool("dashable", true);
+        else if(Input.GetKeyDown("q") && dashable){
+            feet.gameObject.transform.GetChild(0).parent = null;
+            dashable = false;
         }
     }
 
@@ -72,21 +77,14 @@ public class player_control : MonoBehaviour
         if(other.CompareTag("wand") && Input.GetKeyDown("e")){
             other.gameObject.transform.position = hand.position;
             other.gameObject.transform.parent = hand;
-            PublicVars.shootable = true;
+            shootable = true;
         }
-        else if(other.CompareTag("boot") && Input.GetKeyDown("e")){
-            // other.gameObject.transform.position = feet.position;
-            // other.gameObject.transform.parent = feet;
-            PublicVars.dashable = true;
-            _at.SetBool("dashable", true);
-            Destroy(other.gameObject);
+        else if(other.CompareTag("boot") && Input.GetKeyDown("q")){
+            other.gameObject.transform.position = feet.position;
+            other.gameObject.transform.parent = feet;
+            dashable = true;
         }
-        // else if(other.CompareTag("portalgun") && Input.GetKeyDown("e")){
-        //     shootable = false;
-        //     _at.SetBool("shootable", false);
-        // }
-        
-        if(other.CompareTag("key") && Input.GetKeyDown("e")){
+        else if(other.CompareTag("key") && Input.GetKeyDown("e")){
             other.gameObject.transform.position = hand.position;
             other.gameObject.transform.parent = hand;
         }
@@ -119,10 +117,9 @@ public class player_control : MonoBehaviour
         }
 
         // dash
-        if(PublicVars.dashable){
+        if(dashable){
             if(dashing)
             {
-                _at.SetBool("dashing", true);
                 _rb.velocity = transform.right * direction * dash_force;
                 dash_time -= Time.deltaTime;
                 if(grounded){
@@ -130,7 +127,6 @@ public class player_control : MonoBehaviour
                 }
                 if(dash_time <= 0){
                     dashing = false;
-                    _at.SetBool("dashing", false);
                 }
             }//dashing
             else if(!dashing && dash_cooldown > 0){
@@ -152,7 +148,7 @@ public class player_control : MonoBehaviour
 
 
     //shoot
-        if(PublicVars.shootable){
+        if(shootable){
             if(shoot_cool > 0){
                 shoot_cool -= Time.deltaTime;
             }
