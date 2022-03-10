@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 933ac1b9e0c23024688e42f75eb8fda6
+guid: dc60a320603987842ad4f213241d947e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jumpWand_0
+      name: vine_ladder_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 73
-        width: 38
-        height: 42
+        x: 34
+        y: 6
+        width: 6
+        height: 83
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb73031d81da8464fb955b4ac552c531
-      internalID: 200067363
+      spriteID: 72f84c0368193f045b44f49eebc2ad0e
+      internalID: 1828442946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jumpWand_2
+      name: vine_ladder_1
       rect:
         serializedVersion: 2
-        x: 79
-        y: 73
-        width: 38
-        height: 43
+        x: 56
+        y: 9
+        width: 14
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,29 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aeb295676de4ef24d88b797c1c483ba6
-      internalID: 503308884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jumpWand_4
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 10
-        width: 36
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3da96dbdc9ace224f87f593432fddbb7
-      internalID: -1844962301
+      spriteID: ca84c0584f0ec524c9901f6d4406e592
+      internalID: -1994669856
       vertices: []
       indices: 
       edges: []
@@ -225,11 +204,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      jumpWand_1: -875276226
-      jumpWand_4: -1844962301
-      jumpWand_2: 503308884
-      jumpWand_3: -2037498571
-      jumpWand_0: 200067363
+      vine_ladder_1: -1994669856
+      vine_ladder_0: 1828442946
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
