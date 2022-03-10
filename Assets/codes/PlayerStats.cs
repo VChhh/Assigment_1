@@ -42,18 +42,8 @@ public class PlayerStats : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.CompareTag("trap")){
-<<<<<<< HEAD
-
-
             PublicVars.scores -= 300;
             transform.position = PublicVars.checkPoint;
-
-
-
-=======
-            PublicVars.scores -= 300;
-            transform.position = PublicVars.checkPoint;
->>>>>>> parent of 54a4e2f (a)
         }
     }
     // Update is called once per frame
