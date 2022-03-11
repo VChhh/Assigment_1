@@ -151,6 +151,7 @@ MonoBehaviour:
   chasing_dist: 11
   speed_const: 40
   jump_const: 350
+  health: 3
   ground:
     serializedVersion: 2
     m_Bits: 256
