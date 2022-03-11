@@ -8,8 +8,10 @@ public class portal_gun : MonoBehaviour
     public GameObject aim_point;
     public GameObject orange_portal_prefab;
     public GameObject blue_portal_prefab;
+    public LayerMask portalplace;
     private GameObject orange_portal;
     private GameObject blue_portal;
+    private bool portable = false;
 
     private bool orange_exist = false;
     private bool blue_exist = false;
@@ -19,7 +21,9 @@ public class portal_gun : MonoBehaviour
     }
 
     private void Update() {
-        if(Vector2.Distance(aim_point.transform.position, transform.position) < gunRange){
+        portable = Physics2D.OverlapCircle(aim_point.transform.position, 0.1f, portalplace);
+
+        if(portable && Vector2.Distance(aim_point.transform.position, transform.position) < gunRange){
             if(Input.GetButtonDown("Fire1")){
                 if(blue_exist){
                     Destroy(blue_portal);
@@ -45,7 +49,6 @@ public class portal_gun : MonoBehaviour
                 
             }
         }
+
     }
-
-
 }

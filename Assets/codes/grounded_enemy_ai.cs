@@ -48,7 +48,6 @@ public class grounded_enemy_ai : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("bullet")){
-            print(health);
             Destroy(other.gameObject);
             if(health == 1){
                 Destroy(gameObject);
