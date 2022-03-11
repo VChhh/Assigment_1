@@ -10,7 +10,6 @@ public class start_menu : MonoBehaviour
         SceneManager.LoadScene("level_1");
     }
 
-
     public void ExitGame(){
         print("Quit Game!");
         Application.Quit();
