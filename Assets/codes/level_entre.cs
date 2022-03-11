@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 public class level_entre : MonoBehaviour
 {
     public string next_level;
-    // Start is called before the first frame update
 
-    private void OnCollisionEnter2D(Collision2D other) {
+
+    private void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject.CompareTag("Player")){
+            PublicVars.cur_score = 0;
             PublicVars.scores = PublicVars.level1High 
                                 + PublicVars.level2High 
                                 + PublicVars.level3High 

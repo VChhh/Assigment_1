@@ -51,6 +51,7 @@ public class grounded_enemy_ai : MonoBehaviour
             Destroy(other.gameObject);
             if(health == 1){
                 Destroy(gameObject);
+                PublicVars.cur_score += 100;
             }
             else {
                 health--;

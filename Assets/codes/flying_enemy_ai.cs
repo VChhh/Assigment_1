@@ -40,6 +40,7 @@ public class flying_enemy_ai : MonoBehaviour
             Destroy(other.gameObject);
             if(health == 1){
                 Destroy(gameObject);
+                PublicVars.cur_level += 100;
             }
             else {
                 health--;
