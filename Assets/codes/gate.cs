@@ -9,7 +9,10 @@ public class gate : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.CompareTag("Player")){
-            
+            if(other.transform.Find("back").Find(color)){
+                Destroy(other.gameObject);
+                Destroy(transform.gameObject);
+            }
         }
     }
 }
