@@ -75,7 +75,7 @@ public class player_control : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other) {
         //grab
-        if(other.CompareTag("wand") && Input.GetKeyDown("e")){
+        if(other.CompareTag("wand") && Input.GetButtonDown("Grab")){
             other.gameObject.transform.position = hand.position;
             other.gameObject.transform.parent = hand;
             PublicVars.shootable = true;

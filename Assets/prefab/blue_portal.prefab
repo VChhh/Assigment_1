@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   is_orange: 0
-  teleport_dist: 0.2
+  teleport_dist: 0.1
   dst: {fileID: 0}
 --- !u!70 &8566011924512648865
 CapsuleCollider2D:

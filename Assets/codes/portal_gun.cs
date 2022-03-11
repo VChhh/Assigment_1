@@ -35,8 +35,8 @@ public class portal_gun : MonoBehaviour
                 blue_portal = Instantiate(blue_portal_prefab, aim_point.transform.position, aim_point.transform.rotation);
                 blue_exist = true;
                 if(orange_exist && blue_exist){
-                    //blue_portal.GetComponent<portal>().get_dst();
-                    //orange_portal.GetComponent<portal>().get_dst();
+                    blue_portal.GetComponent<portal>().get_dst();
+                    orange_portal.GetComponent<portal>().get_dst();
                 }
 
             }
@@ -47,8 +47,8 @@ public class portal_gun : MonoBehaviour
                 orange_portal = Instantiate(orange_portal_prefab, aim_point.transform.position, aim_point.transform.rotation);
                 orange_exist = true;
                 if(orange_exist && blue_exist){
-                    //blue_portal.GetComponent<portal>().get_dst();
-                    //orange_portal.GetComponent<portal>().get_dst();
+                    blue_portal.GetComponent<portal>().get_dst();
+                    orange_portal.GetComponent<portal>().get_dst();
                 }
                 
             }
