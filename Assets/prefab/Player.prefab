@@ -2792,6 +2792,7 @@ MonoBehaviour:
   speed_const: 5
   jump_const: 350
   hand: {fileID: 6632916306537028072}
+  back: {fileID: 5176266423662410726}
   dash_force: 5
   dash_time: 0.15
   dash_cooldown: 0.5

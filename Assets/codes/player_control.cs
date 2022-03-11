@@ -10,6 +10,7 @@ public class player_control : MonoBehaviour
     public int jump_const = 500;
     //===========grab============
     public Transform hand;
+    public Transform back;
 
     //============dash================
     public float dash_force;
@@ -77,22 +78,18 @@ public class player_control : MonoBehaviour
             other.gameObject.transform.parent = hand;
             PublicVars.shootable = true;
         }
-        else if(other.CompareTag("boot") && Input.GetKeyDown("e")){
+        if(other.CompareTag("boot") && Input.GetKeyDown("e")){
             // other.gameObject.transform.position = feet.position;
             // other.gameObject.transform.parent = feet;
             PublicVars.dashable = true;
             _at.SetBool("dashable", true);
             Destroy(other.gameObject);
         }
-        // else if(other.CompareTag("portalgun") && Input.GetKeyDown("e")){
-        //     shootable = false;
-        //     _at.SetBool("shootable", false);
-        // }
-        
         if(other.CompareTag("key") && Input.GetKeyDown("e")){
-            other.gameObject.transform.position = hand.position;
-            other.gameObject.transform.parent = hand;
+            other.gameObject.transform.position = back.position;
+            other.gameObject.transform.parent = back;
         }
+
     }
 
 
