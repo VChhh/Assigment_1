@@ -47,7 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   is_orange: 0
-  teleport_dist: 0.1
+  teleport_dist: 0.2
+  b_teleport_dist: 0.01
   dst: {fileID: 0}
 --- !u!70 &8566011924512648865
 CapsuleCollider2D:
@@ -62,8 +63,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0029232502, y: -0.0054596663}
-  m_Size: {x: 0.16397333, y: 1.2574921}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.13121605, y: 1.2574921}
   m_Direction: 0
 --- !u!212 &7651818191530497740
 SpriteRenderer:
