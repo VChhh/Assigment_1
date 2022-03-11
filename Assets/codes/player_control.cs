@@ -77,11 +77,13 @@ public class player_control : MonoBehaviour
         //grab
         if(other.CompareTag("wand") && Input.GetButtonDown("Grab")){
             if(hand.childCount > 0){
+                hand.GetChild(0).GetComponent<Collider2D>().enabled = true;
                 hand.DetachChildren();
             }
             other.gameObject.transform.position = hand.position;
             other.gameObject.transform.parent = hand;
             PublicVars.shootable = true;
+            other.GetComponent<Collider2D>().enabled = false;
         }
         if(other.CompareTag("boot") && Input.GetButtonDown("Grab")){
             // other.gameObject.transform.position = feet.position;
@@ -96,12 +98,14 @@ public class player_control : MonoBehaviour
         }
         if(other.CompareTag("portalGun") && Input.GetButtonDown("Grab")){
             if(hand.childCount > 0){
+                hand.GetChild(0).GetComponent<Collider2D>().enabled = true;
                 hand.DetachChildren();
             }
             other.gameObject.transform.forward = transform.forward;
             // other.gameObject.transform.localScale *= new Vector2(-1,1);
             other.gameObject.transform.position = hand.position;
             other.gameObject.transform.parent = hand;
+            other.GetComponent<Collider2D>().enabled = false;
         }
 
     }
