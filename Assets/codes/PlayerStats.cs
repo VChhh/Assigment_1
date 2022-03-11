@@ -21,10 +21,10 @@ public class PlayerStats : MonoBehaviour
         if(PublicVars.cur_level >= 3){
             PublicVars.dashable = true;
         }
-        if(transform.Find("wand")){
+        if(transform.Find("hand").Find("wand")){
             PublicVars.shootable = true;
         }
-        if(transform.Find("portalGun")){
+        if(transform.Find("hand").Find("portalGun")){
             PublicVars.shootable = false;
             PublicVars.portable = true;
         }
