@@ -25,7 +25,7 @@ public class portal_gun : MonoBehaviour
             aim_point.SetActive(true);
         }
 
-        portable = Physics2D.OverlapCircle(aim_point.transform.position, 0.1f, portalplace);
+        portable = PublicVars.portable && Physics2D.OverlapCircle(aim_point.transform.position, 0.1f, portalplace);
 
         if(portable && Vector2.Distance(aim_point.transform.position, transform.position) < gunRange){
             if(Input.GetButtonDown("Fire1")){
