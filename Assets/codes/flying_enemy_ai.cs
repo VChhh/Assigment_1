@@ -23,8 +23,8 @@ public class flying_enemy_ai : MonoBehaviour
 
             if(Vector2.Distance(transform.position, player.position) < chasing_dist){
 
-                if( (player.position.x > transform.position.x && transform.localScale.x < 0) || 
-                    (player.position.x < transform.position.x && transform.localScale.x > 0)) {
+                if( (player.position.x > transform.position.x && transform.localScale.x > 0) || 
+                    (player.position.x < transform.position.x && transform.localScale.x < 0)) {
                     transform.localScale *= new Vector2 (-1, 1);
                 }
 
