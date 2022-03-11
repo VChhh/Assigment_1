@@ -280,6 +280,10 @@ PrefabInstance:
       value: MagicManager
       objectReference: {fileID: 0}
     - target: {fileID: 683056486922856548, guid: f1a415a0038614903b0693d69f13a349, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 683056486922856548, guid: f1a415a0038614903b0693d69f13a349, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
@@ -3962,6 +3966,10 @@ PrefabInstance:
     - target: {fileID: 6112627637916402362, guid: c41e0c3a847fa43cb9240508eb4aa240, type: 3}
       propertyPath: m_Name
       value: JumpManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112627637916402364, guid: c41e0c3a847fa43cb9240508eb4aa240, type: 3}
+      propertyPath: m_Volume
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6112627637916402367, guid: c41e0c3a847fa43cb9240508eb4aa240, type: 3}
       propertyPath: m_RootOrder
@@ -76212,7 +76220,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.9835346, y: 1}
+    m_SensorSize: {x: 2.472354, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
