@@ -21,6 +21,7 @@ TagManager:
   - level_entry
   - portalGun
   - bullet
+  - cannon_bullet
   layers:
   - Default
   - TransparentFX
