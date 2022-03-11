@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2477530743715648121}
-  m_LocalRotation: {x: -0, y: -0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.38, y: 0.14, z: -0.0070082555}
   m_LocalScale: {x: -0.83333325, y: 0.83333325, z: 0.83333325}
   m_ConstrainProportionsScale: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunRange: 1000
-  aim_point: {fileID: 0}
+  aim_point: {fileID: 1332014633350709909, guid: 9e6f3205b804dc347a1fa463714ffb10, type: 3}
   orange_portal_prefab: {fileID: 2426805914298403408, guid: e3969634509f3124ba9ef6b3fd55d441, type: 3}
   blue_portal_prefab: {fileID: 1605342026985443999, guid: 35b93bded099d7941aa92b9642d3481a, type: 3}
   portalplace:
