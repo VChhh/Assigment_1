@@ -372,21 +372,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: portalgun
       objectReference: {fileID: 0}
-    - target: {fileID: 2477530743715648121, guid: 3f9ba38715a78c341a4fb5d9ba345dbd, type: 3}
-      propertyPath: m_TagString
-      value: portalGun
-      objectReference: {fileID: 0}
-    - target: {fileID: 2477530743715648124, guid: 3f9ba38715a78c341a4fb5d9ba345dbd, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2477530743715648126, guid: 3f9ba38715a78c341a4fb5d9ba345dbd, type: 3}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2477530743715648126, guid: 3f9ba38715a78c341a4fb5d9ba345dbd, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.8333333
       objectReference: {fileID: 0}
     - target: {fileID: 2477530743715648126, guid: 3f9ba38715a78c341a4fb5d9ba345dbd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -945,27 +933,6 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
---- !u!1 &1808923656 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2477530743715648121, guid: 3f9ba38715a78c341a4fb5d9ba345dbd, type: 3}
-  m_PrefabInstance: {fileID: 580760678}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &1808923660
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1808923656}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.046552, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.735634
 --- !u!1 &1867114719
 GameObject:
   m_ObjectHideFlags: 0

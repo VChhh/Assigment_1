@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2477530743715648126}
   - component: {fileID: 2477530743715648124}
   - component: {fileID: 2477530743715648127}
+  - component: {fileID: 1808923660}
   m_Layer: 0
   m_Name: portalgun
   m_TagString: portalGun
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2477530743715648121}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.38, y: 0.14, z: -0.0070082555}
-  m_LocalScale: {x: -0.83333325, y: 0.83333325, z: 0.83333325}
+  m_LocalScale: {x: 0.8333333, y: 0.83333325, z: 0.83333325}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,9 +99,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunRange: 1000
-  aim_point: {fileID: 1332014633350709909, guid: 9e6f3205b804dc347a1fa463714ffb10, type: 3}
+  aim_point: {fileID: 0}
   orange_portal_prefab: {fileID: 2426805914298403408, guid: e3969634509f3124ba9ef6b3fd55d441, type: 3}
   blue_portal_prefab: {fileID: 1605342026985443999, guid: 35b93bded099d7941aa92b9642d3481a, type: 3}
   portalplace:
     serializedVersion: 2
     m_Bits: 1024
+--- !u!58 &1808923660
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2477530743715648121}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.046552, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.735634
