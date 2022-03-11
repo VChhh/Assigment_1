@@ -13,6 +13,7 @@ public class JumpManager : MonoBehaviour
 
     void Update()
     {
+        //sound for jumping on key press
         if(Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)){
             audioSrc.Play();
         }
