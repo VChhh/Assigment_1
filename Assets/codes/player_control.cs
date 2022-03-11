@@ -91,6 +91,10 @@ public class player_control : MonoBehaviour
             other.gameObject.transform.position = back.position;
             other.gameObject.transform.parent = back;
         }
+        if(other.CompareTag("portalGun") && Input.GetButtonDown("Grab")){
+            other.gameObject.transform.position = hand.position;
+            other.gameObject.transform.parent = hand;
+        }
 
     }
 
