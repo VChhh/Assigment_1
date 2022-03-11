@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1738411687163386369}
   - component: {fileID: 3410510999023045843}
   - component: {fileID: 4195904375926408311}
+  - component: {fileID: 3436319576066418815}
   m_Layer: 0
   m_Name: orange_portal
   m_TagString: orange_portal
@@ -109,6 +110,22 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2426805914298403408}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00433743, y: -0.004337251}
+  serializedVersion: 2
+  m_Radius: 0.26120704
+--- !u!70 &3436319576066418815
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2426805914298403408}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -116,5 +133,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.4
+  m_Size: {x: 0.13121605, y: 1.2574921}
+  m_Direction: 0

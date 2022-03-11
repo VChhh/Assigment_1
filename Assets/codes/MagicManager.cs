@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class MagicManager : MonoBehaviour
 {
-    // Start is called before the first frame update
     private AudioSource audioSrc;
     void Start()
     {
         audioSrc = GetComponent<AudioSource> ();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //magic want attack sound when leftclicking mouse
         if(Input.GetButtonDown("Fire1")){
             audioSrc.Play();
         }

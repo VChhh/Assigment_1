@@ -11,9 +11,9 @@ public class JumpManager : MonoBehaviour
         audioSrc = GetComponent<AudioSource> ();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //sound for jumping on key press
         if(Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Space)){
             audioSrc.Play();
         }
