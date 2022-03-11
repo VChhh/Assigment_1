@@ -76,6 +76,9 @@ public class player_control : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other) {
         //grab
         if(other.CompareTag("wand") && Input.GetButtonDown("Grab")){
+            if(hand.childCount > 0){
+                hand.DetachChildren();
+            }
             other.gameObject.transform.position = hand.position;
             other.gameObject.transform.parent = hand;
             PublicVars.shootable = true;
@@ -92,6 +95,9 @@ public class player_control : MonoBehaviour
             other.gameObject.transform.parent = back;
         }
         if(other.CompareTag("portalGun") && Input.GetButtonDown("Grab")){
+            if(hand.childCount > 0){
+                hand.DetachChildren();
+            }
             other.gameObject.transform.forward = transform.forward;
             // other.gameObject.transform.localScale *= new Vector2(-1,1);
             other.gameObject.transform.position = hand.position;
