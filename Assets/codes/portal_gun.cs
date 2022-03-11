@@ -21,9 +21,7 @@ public class portal_gun : MonoBehaviour
     }
 
     private void Update() {
-        if(PublicVars.portable){
-            aim_point.SetActive(true);
-        }
+        aim_point.SetActive(PublicVars.portable);
 
         portable = PublicVars.portable && Physics2D.OverlapCircle(aim_point.transform.position, 0.1f, portalplace);
 
