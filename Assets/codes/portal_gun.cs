@@ -5,7 +5,7 @@ using UnityEngine;
 public class portal_gun : MonoBehaviour
 {
     public float gunRange = 1000;
-    public Transform aim_point;
+    public GameObject aim_point;
     public GameObject orange_portal_prefab;
     public GameObject blue_portal_prefab;
     private GameObject orange_portal;
@@ -13,14 +13,18 @@ public class portal_gun : MonoBehaviour
 
     private bool orange_exist = false;
     private bool blue_exist = false;
+    private void Start() {
+        aim_point.SetActive(true);
+        aim_point.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
+    }
 
     private void Update() {
-        if(Vector2.Distance(aim_point.position, transform.position) < gunRange){
+        if(Vector2.Distance(aim_point.transform.position, transform.position) < gunRange){
             if(Input.GetButtonDown("Fire1")){
                 if(blue_exist){
                     Destroy(blue_portal);
                 }
-                blue_portal = Instantiate(blue_portal_prefab, aim_point.position, aim_point.rotation);
+                blue_portal = Instantiate(blue_portal_prefab, aim_point.transform.position, aim_point.transform.rotation);
                 blue_exist = true;
                 if(orange_exist && blue_exist){
                     //blue_portal.GetComponent<portal>().get_dst();
@@ -32,7 +36,7 @@ public class portal_gun : MonoBehaviour
                 if(orange_exist){
                     Destroy(orange_portal);
                 }
-                orange_portal = Instantiate(orange_portal_prefab, aim_point.position, aim_point.rotation);
+                orange_portal = Instantiate(orange_portal_prefab, aim_point.transform.position, aim_point.transform.rotation);
                 orange_exist = true;
                 if(orange_exist && blue_exist){
                     //blue_portal.GetComponent<portal>().get_dst();

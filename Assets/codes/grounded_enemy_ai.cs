@@ -11,6 +11,7 @@ public class grounded_enemy_ai : MonoBehaviour
     public int chasing_dist = 10;
     public int speed_const = 12;
     public int jump_const = 100;
+    public int health = 3;
 
     // ============================
     public LayerMask ground;
@@ -43,5 +44,17 @@ public class grounded_enemy_ai : MonoBehaviour
                 _rb.AddForce(new Vector2(-transform.localScale.x * speed_const, 0));
             }
         } 
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if(other.CompareTag("bullet")){
+            Destroy(other.gameObject);
+            if(health == 0){
+                Destroy(gameObject);
+            }
+            else {
+                health--;
+            }
+        }
     }
 }
