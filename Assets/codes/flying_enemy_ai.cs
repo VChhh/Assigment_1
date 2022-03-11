@@ -8,6 +8,7 @@ public class flying_enemy_ai : MonoBehaviour
     Rigidbody2D _rb;
     public int chasing_dist = 10;
     public int speed_const = 12;
+    public int health = 3;
 
     void Start()
     {
@@ -32,5 +33,18 @@ public class flying_enemy_ai : MonoBehaviour
 
             }
         } 
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if(other.CompareTag("bullet")){
+            print(health);
+            Destroy(other.gameObject);
+            if(health == 0){
+                Destroy(gameObject);
+            }
+            else {
+                health--;
+            }
+        }
     }
 }
