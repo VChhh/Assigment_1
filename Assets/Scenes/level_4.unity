@@ -540,7 +540,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.995467, y: 1}
+    m_SensorSize: {x: 1.7779515, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -25752,6 +25752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 624979534}
   - component: {fileID: 624979533}
+  - component: {fileID: 624979535}
   m_Layer: 0
   m_Name: browngate
   m_TagString: Untagged
@@ -25826,6 +25827,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &624979535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624979532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99c0853974a48746bca45eeb11e286e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: brown
 --- !u!1 &758183355
 GameObject:
   m_ObjectHideFlags: 0
@@ -26047,6 +26061,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1120330657}
   - component: {fileID: 1120330656}
+  - component: {fileID: 1120330658}
   m_Layer: 0
   m_Name: bluegate
   m_TagString: Untagged
@@ -26121,6 +26136,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1120330658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120330655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99c0853974a48746bca45eeb11e286e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: blue
 --- !u!1 &1122137747
 GameObject:
   m_ObjectHideFlags: 0
@@ -27157,6 +27185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2056948937}
   - component: {fileID: 2056948936}
+  - component: {fileID: 2056948938}
   m_Layer: 0
   m_Name: yellowgate
   m_TagString: Untagged
@@ -27231,6 +27260,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2056948938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056948935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99c0853974a48746bca45eeb11e286e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: yellow
 --- !u!1 &2146049614
 GameObject:
   m_ObjectHideFlags: 0
