@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1093072947374663981}
-  - component: {fileID: 1738411687163386368}
   - component: {fileID: 1738411687163386369}
   - component: {fileID: 7452748495773772944}
+  - component: {fileID: 3410510999023045843}
   m_Layer: 0
   m_Name: orange_portal
   m_TagString: orange_portal
@@ -34,7 +34,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1738411687163386368
+--- !u!114 &1738411687163386369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2426805914298403408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a2b008146968874e9167f511f4f27d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  is_orange: 1
+  teleport_dist: 0.2
+  dst: {fileID: 0}
+--- !u!70 &7452748495773772944
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2426805914298403408}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0062857866, y: 0.009548247}
+  m_Size: {x: 0.2582705, y: 1.2449342}
+  m_Direction: 0
+--- !u!212 &3410510999023045843
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,47 +105,15 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 1, g: 0.8847568, b: 0, a: 1}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 406303431, guid: 18ca3538eff575a4eb9454a8b967957b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.68333334, y: 1.2833333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1738411687163386369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2426805914298403408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a2b008146968874e9167f511f4f27d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  is_orange: 1
-  teleport_dist: 0.2
-  dst: {fileID: 0}
-  able_to_teleport: 0
---- !u!70 &7452748495773772944
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2426805914298403408}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0062857866, y: -0.0031428933}
-  m_Size: {x: 0.2582705, y: 1.9937142}
-  m_Direction: 0

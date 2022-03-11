@@ -16,6 +16,9 @@ public class portal_gun : MonoBehaviour
     private bool orange_exist = false;
     private bool blue_exist = false;
     private void Start() {
+        if(FindObjectsOfType<aiming>().Length < 1){
+            aim_point = Instantiate(aim_point, transform.position, Quaternion.identity);
+        }
         aim_point.SetActive(true);
         aim_point.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
     }
