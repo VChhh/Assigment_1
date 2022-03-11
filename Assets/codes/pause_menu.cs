@@ -27,9 +27,7 @@ public class pause_menu : MonoBehaviour
         level_selector_menu.SetActive(false);
         Time.timeScale = 1f;
         is_paused = false;
-
         Cursor.visible = false;
-
     }
 
     public void Pause() {
@@ -53,6 +51,7 @@ public class pause_menu : MonoBehaviour
 
     public void level_selector(string name){
         Time.timeScale = 1;
+        PublicVars.cur_score = 0;
         SceneManager.LoadScene(name);
     }
 }
