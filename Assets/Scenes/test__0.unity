@@ -188,11 +188,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966fd84f1e4ca7644b80552f3e7ddf2c, type: 3}
---- !u!50 &176584064 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 5392110384901546894, guid: 53e4c72a5152fb649a77940c97269874, type: 3}
-  m_PrefabInstance: {fileID: 1559626856}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &235118591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -607,26 +602,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5448283729565176004, guid: 62d5784418996904caf48696d3e02a06, type: 3}
   m_PrefabInstance: {fileID: 1161656551}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1089514399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1089514398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30a27609307f77b4c83cdc3bf7eff8b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player_rb: {fileID: 176584064}
-  chasing_dist: 8
-  speed_const: 2
-  jump_const: 10
-  ground:
-    serializedVersion: 2
-    m_Bits: 256
-  feet: {fileID: 692380415}
 --- !u!50 &1089514400
 Rigidbody2D:
   serializedVersion: 4
@@ -647,7 +622,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!4 &1089514403 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3221348891731960103, guid: 62d5784418996904caf48696d3e02a06, type: 3}
@@ -873,11 +848,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3221348891731960103, guid: 62d5784418996904caf48696d3e02a06, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.72
+      value: 4.11
       objectReference: {fileID: 0}
     - target: {fileID: 3221348891731960103, guid: 62d5784418996904caf48696d3e02a06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.52
+      value: -0.92
       objectReference: {fileID: 0}
     - target: {fileID: 3221348891731960103, guid: 62d5784418996904caf48696d3e02a06, type: 3}
       propertyPath: m_LocalPosition.z
@@ -914,6 +889,22 @@ PrefabInstance:
     - target: {fileID: 5448283729565176004, guid: 62d5784418996904caf48696d3e02a06, type: 3}
       propertyPath: m_Name
       value: monster (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182021378930130767, guid: 62d5784418996904caf48696d3e02a06, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182021378930130767, guid: 62d5784418996904caf48696d3e02a06, type: 3}
+      propertyPath: speed_const
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182021378930130767, guid: 62d5784418996904caf48696d3e02a06, type: 3}
+      propertyPath: chasing_dist
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722262823728510156, guid: 62d5784418996904caf48696d3e02a06, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62d5784418996904caf48696d3e02a06, type: 3}
