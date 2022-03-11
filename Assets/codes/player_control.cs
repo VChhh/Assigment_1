@@ -80,14 +80,14 @@ public class player_control : MonoBehaviour
             other.gameObject.transform.parent = hand;
             PublicVars.shootable = true;
         }
-        if(other.CompareTag("boot") && Input.GetKeyDown("e")){
+        if(other.CompareTag("boot") && Input.GetButtonDown("Grab")){
             // other.gameObject.transform.position = feet.position;
             // other.gameObject.transform.parent = feet;
             PublicVars.dashable = true;
             _at.SetBool("dashable", true);
             Destroy(other.gameObject);
         }
-        if(other.CompareTag("key") && Input.GetKeyDown("e")){
+        if(other.CompareTag("key") && Input.GetButtonDown("Grab")){
             other.gameObject.transform.position = back.position;
             other.gameObject.transform.parent = back;
         }
@@ -141,7 +141,7 @@ public class player_control : MonoBehaviour
             else if(grounded){
                 dash_limit = 1;
             }
-            else if(Input.GetKeyDown("left shift") && xSpeed != 0 && dash_limit == 1){
+            else if(Input.GetButtonDown("Dash") && xSpeed != 0 && dash_limit == 1){
                 dashing = true;
                 dash_limit = 0;
                 dash_cooldown = origin_cooldown;
