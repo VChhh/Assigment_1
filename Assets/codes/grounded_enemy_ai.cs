@@ -56,5 +56,9 @@ public class grounded_enemy_ai : MonoBehaviour
                 health--;
             }
         }
+        if(other.CompareTag("cannon_bullet")){
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
     }
 }
