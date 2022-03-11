@@ -31,7 +31,8 @@ public class player_control : MonoBehaviour
     // private Vector2 mousePos;
     // public Vector2 shoot_direction;
 
-    public float shoot_cool = 1;
+    public float shoot_cool = 0.8f;
+    private float origin_shootcool;
 
     //===========================
     Rigidbody2D _rb;
@@ -53,6 +54,7 @@ public class player_control : MonoBehaviour
         _at.SetBool("shootable", false);
         origin_dash_time = dash_time;
         origin_cooldown = dash_cooldown;
+        origin_shootcool = shoot_cool;
     }
 
     private void FixedUpdate() {
@@ -157,7 +159,7 @@ public class player_control : MonoBehaviour
                 shoot_cool -= Time.deltaTime;
             }
             else if(Input.GetButtonDown("Fire1")){
-                shoot_cool = 1;
+                shoot_cool = origin_shootcool;
                 GameObject bullet = Instantiate(bulletPrefab, handPos.position, Quaternion.identity);
                 bullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpd * -transform.localScale.x, 0));
 

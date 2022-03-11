@@ -69,9 +69,13 @@ public class PlayerStats : MonoBehaviour
             Destroy(other.gameObject);
             display();
         }
-        else if(other.CompareTag("b_gem")){
+        if(other.CompareTag("b_gem")){
             PublicVars.cur_score += 300;
             Destroy(other.gameObject);
+            display();
+        }
+        if(other.CompareTag("monster")){
+            PublicVars.cur_score -= 20;
             display();
         }
 
@@ -82,6 +86,10 @@ public class PlayerStats : MonoBehaviour
         if(other.gameObject.CompareTag("trap")){
             PublicVars.cur_score -= 300;
             transform.position = PublicVars.checkPoint;
+            display();
+        }
+        if(other.gameObject.CompareTag("monster")){
+            PublicVars.cur_score -= 20;
             display();
         }
     }
