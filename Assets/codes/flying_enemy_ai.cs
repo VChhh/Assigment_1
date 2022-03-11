@@ -35,11 +35,11 @@ public class flying_enemy_ai : MonoBehaviour
         } 
     }
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("bullet")){
             print(health);
             Destroy(other.gameObject);
-            if(health == 0){
+            if(health == 1){
                 Destroy(gameObject);
             }
             else {
