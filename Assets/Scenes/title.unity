@@ -1328,7 +1328,7 @@ MonoBehaviour:
   m_text: 'LB: shooting and blue portal
 
 
-    RB: orange portalw'
+    RB: orange portal'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 84d8430070c0ced44bffa2eec1f95abf, type: 2}
   m_sharedMaterial: {fileID: 4041104073304726596, guid: 84d8430070c0ced44bffa2eec1f95abf, type: 2}

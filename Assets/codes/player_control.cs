@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class player_control : MonoBehaviour
 {
-    bool isAlive = true;
+
     public int speed_const = 10;
     public int jump_const = 500;
     //===========grab============

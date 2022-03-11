@@ -7,12 +7,6 @@ public class PlayerStats : MonoBehaviour
 {
 
     public TextMeshProUGUI playStats;
-
-
-    public LayerMask killable; // What layers can be grabbed
-
-    private float raycastDist = 3;
-
     void Start()
     {
         PublicVars.cur_level = SceneManager.GetActiveScene().name[6] - '0';
