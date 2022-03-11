@@ -24,7 +24,7 @@ public class PlayerStats : MonoBehaviour
         if(transform.Find("hand").Find("wand")){
             PublicVars.shootable = true;
         }
-        if(transform.Find("hand").Find("portalGun")){
+        if(transform.Find("hand").Find("portalgun")){
             PublicVars.shootable = false;
             PublicVars.portable = true;
         }
