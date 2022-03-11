@@ -20,7 +20,7 @@ public class cannon : MonoBehaviour
             yield return new WaitForSeconds(cooldown);
 
             GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-            bullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpd * transform.localScale.x, 0));
+            bullet.GetComponent<Rigidbody2D>().AddForce(transform.right * bulletSpd, ForceMode2D.Impulse);
             Destroy(bullet.gameObject, destroy_time);
 
         }

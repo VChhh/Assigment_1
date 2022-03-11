@@ -99,6 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootable: 1
   bulletPrefab: {fileID: 1230855904949174232, guid: 8cd66033da7c5b545af3cce1bb25f305, type: 3}
-  bulletSpd: 200
+  bulletSpd: 20
   cooldown: 1.5
   destroy_time: 2

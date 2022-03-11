@@ -74,6 +74,11 @@ public class PlayerStats : MonoBehaviour
             Destroy(other.gameObject);
             display();
         }
+        if(other.CompareTag("cannon_bullet")){
+            PublicVars.cur_score -= 100;
+            Destroy(other.gameObject);
+            display();
+        }
         if(other.CompareTag("monster")){
             PublicVars.cur_score -= 20;
             display();

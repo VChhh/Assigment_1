@@ -2799,7 +2799,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8128542081128347935, guid: c714f82cc3d96b045a1cdf34958c2bbe, type: 3}
   bulletSpd: 1
   handPos: {fileID: 6632916306537028072}
-  shoot_cool: 0.4
+  shoot_cool: 0.3
   ground:
     serializedVersion: 2
     m_Bits: 256
