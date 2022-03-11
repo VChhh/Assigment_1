@@ -32323,10 +32323,6 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
-<<<<<<< HEAD
---- !u!1839735485 &1357904365
-Tilemap:
-=======
   m_SpriteSortPoint: 0
 --- !u!4 &1122137749
 Transform:
@@ -32430,7 +32426,6 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1123894317
 MonoBehaviour:
->>>>>>> a965ac0d161faa30af2accb9fc61401fcd89d234
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
