@@ -12,6 +12,7 @@ public class MagicManager : MonoBehaviour
 
     void Update()
     {
+        //magic want attack sound when leftclicking mouse
         if(Input.GetButtonDown("Fire1")){
             audioSrc.Play();
         }
