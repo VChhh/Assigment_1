@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 511585872838490795}
   m_Layer: 0
   m_Name: spider
-  m_TagString: Untagged
+  m_TagString: monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,18 +100,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.11576082}
+  m_Offset: {x: 0.025458366, y: -0.45344087}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 2.1333334, y: 2.1333334}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.40847835}
+  m_Size: {x: 1.2849469, y: 0.8996493}
   m_EdgeRadius: 0
 --- !u!50 &511585872838490792
 Rigidbody2D:
@@ -146,9 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f79d0f7d276fe543870ba51b6496595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chasing_dist: 8
-  speed_const: 30
-  jump_const: 150
+  chasing_dist: 11
+  speed_const: 40
+  jump_const: 300
   ground:
     serializedVersion: 2
     m_Bits: 256
