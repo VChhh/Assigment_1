@@ -20,6 +20,7 @@ TagManager:
   - b_gem
   - level_entry
   - portalGun
+  - bullet
   layers:
   - Default
   - TransparentFX

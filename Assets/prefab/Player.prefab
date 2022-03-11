@@ -567,7 +567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &505135753
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2796,7 +2796,7 @@ MonoBehaviour:
   dash_time: 0.15
   dash_cooldown: 0.5
   bulletPrefab: {fileID: 8128542081128347935, guid: c714f82cc3d96b045a1cdf34958c2bbe, type: 3}
-  bulletSpd: 500
+  bulletSpd: 1
   handPos: {fileID: 6632916306537028072}
   shoot_cool: 1
   ground:

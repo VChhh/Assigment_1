@@ -5,7 +5,7 @@ using UnityEngine;
 public class portal : MonoBehaviour
 {
     public bool is_orange;
-    public float teleport_dist = 0.2f;
+    public float teleport_dist = 0.3f;
     public Transform dst;
     public bool able_to_teleport = false;
     private void Start() {

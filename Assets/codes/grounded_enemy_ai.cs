@@ -4,42 +4,42 @@ using UnityEngine;
 
 public class grounded_enemy_ai : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public Rigidbody2D _player_rb;
+    Transform player;
     Rigidbody2D _rb;
     public int chasing_dist = 10;
     public int speed_const = 12;
-    public int jump_const = 400;
-    private float chase_y_check = .8f;
-    public LayerMask ground;
-    public Transform feet;
-    float ground_check_dist = .2f;
-    bool grounded = false;
+    public int jump_const = 100;
 
+    // ============================
+    public LayerMask ground;
+    float ground_check_dist = .2f;
+    public bool grounded = false;
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         _rb = GetComponent<Rigidbody2D>();
+        StartCoroutine(moveloop());
     }
-
-    // Update is called once per frame
     private void FixedUpdate() {
-        grounded = Physics2D.OverlapCircle(feet.position, ground_check_dist, ground);
+        Vector2 temp = new Vector2(transform.position.x, transform.position.y - 0.4f);
+        grounded = Physics2D.OverlapCircle(temp, ground_check_dist, ground);
     }
-    void Update()
-    {
-        if(!grounded || (Mathf.Abs(_rb.position.y - _player_rb.position.y) <= chase_y_check) && 
-          (Vector2.Distance(_rb.position, _player_rb.position) <= chasing_dist)){ 
-            float xSpeed = _rb.position.x < _player_rb.position.x ? speed_const : -speed_const;
-            _rb.position = new Vector2(_rb.position.x + xSpeed * 0.001f, _rb.position.y);
-            if(grounded){
-                StartCoroutine(Wait(.5f));
-                _rb.AddForce(new Vector2(0, jump_const));
-            }
+    private void Update() {
+        if( (player.position.x > transform.position.x && transform.localScale.x < 0) || 
+            (player.position.x < transform.position.x && transform.localScale.x > 0)) {
+                transform.localScale *= new Vector2 (-1, 1);
         }
     }
-
-    IEnumerator Wait(float t){
-        yield return new WaitForSeconds(t);
+    IEnumerator moveloop(){
+        while(true){
+            yield return new WaitForSeconds(Random.Range(0.3f, 0.5f));
+            
+            if(Vector2.Distance(transform.position, player.position) < chasing_dist) {
+                if(grounded){
+                    _rb.AddForce(new Vector2(0 , jump_const));
+                }
+                _rb.AddForce(new Vector2(transform.localScale.x * speed_const, 0));
+            }
+        } 
     }
-    
 }
